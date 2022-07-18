@@ -15,12 +15,12 @@ function App() {
       </Greet>
       <Greet name="A" nickName="Z">
         <button>Action</button>
-      </Greet>
-      <Greet name="Z" nickName="A"/>
+      </Greet> */}
+      {/* <Greet name="Z" nickName="A"/>
       <Greet name="O" nickName="T"/>
       <Welcome name="T" nickName="O"/>
-      <Welcome name="T" nickName="O"/>
       <Welcome name="T" nickName="O"/> */}
+      <Welcome name="T" nickName="O"/>
     </div>
   );
 }
