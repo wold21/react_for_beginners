@@ -8,6 +8,7 @@ import FunctionClick from "./components/FunctionClick";
 import ClassClick from "./components/ClassClick";
 import EventBind from "./components/EventBind";
 import ParentComponent from "./components/ParentComponent";
+import UseGreeting from "./components/UseGreeting";
 
 function App() {
     return (
@@ -26,8 +27,9 @@ function App() {
             <Message />
             <FunctionClick />
             <ClassClick /> 
-            <EventBind />*/}
-            <ParentComponent />
+            <EventBind />
+            <ParentComponent />*/}
+            <UseGreeting />
         </div>
     );
 }
