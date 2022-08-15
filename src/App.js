@@ -10,6 +10,7 @@ import ParentComponent from "./components/ParentComponent";
 import UseGreeting from "./components/UseGreeting";
 import NameList from "./components/NameList";
 import Form from "./components/Form";
+import LifecycleA from "./components/LifecycleA";
 
 function App() {
     return (
@@ -31,8 +32,9 @@ function App() {
             <EventBind />
             <ParentComponent />
             <UseGreeting />
-            <NameList />*/}
-            <Form />
+            <NameList />
+            <Form />*/}
+            <LifecycleA />
         </div>
     );
 }
