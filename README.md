@@ -27,35 +27,35 @@
 1.  constuctor(props)
     -   A special function that will get called whenever a new component is created.
     -   Initializing state Binding the event handlers
-    -   Do not cause side effects. Ex: HTTP requests
+    -   <span style='color:red;'>Do not cause side effects. Ex: HTTP requests</span>
     -   super(props) Directly overwtite this.state
 2.  static getDerivedStateFromProps(props, state)
     -   When the state of the component depends on changes in props over time.
     -   Set the state
-    -   Do not cause side effects. Ex: HTTP requests
+    -   <span style='color:red;'>Do not cause side effects. Ex: HTTP requests</span>
 3.  render()
     -   Only required method
     -   Read props & state and return JSX
-    -   Do not change state or interact with DOM or make ajax calls.
+    -   <span style='color:red;'>Do not change state or interact with DOM or make ajax calls.</span>
     -   Children components lifecycle methods are also executed.
 4.  componentDidMount()
     -   Invoked immediately after a component and all its children components have been rendered to the DOM
-    -   Cause side effects. ExL Interact with the DOM or perform any ajax calls to load data
+    -   <span style='color:red;'>Cause side effects. Ex: Interact with the DOM or perform any ajax calls to load data</span>
 
 ### Updating Lifecycle Methods
 
 1.  static getDerivedStateFromProps(props, state)
     -   Method is called every time a component is re-rendered
     -   Set the state
-    -   Do not cause side effects. Ex: HTTP requests
+    -   <span style='color:red;'>Do not cause side effects. Ex: HTTP requests</span>
 2.  shouldComponentUpdate(nextProps, nextState)
     -   Dictates if the component should re-render or not
     -   Performance optimization
-    -   Do not cause side effects. Ex: HTTP requests Calling the setState method
+    -   <span style='color:red;'>Do not cause side effects. Ex: HTTP requests Calling the setState method</span>
 3.  render()
     -   Only required method
     -   Read props & state and return JSX
-    -   Do not change state or interact with DOM or make ajax calls.
+    -   <span style='color:red;'>Do not change state or interact with DOM or make ajax calls.</span>
 4.  getSnapshotBeforeUpdate(prevProps, prevState)
     -   Called right before the changes from the virtual DOM are to be reflected in the DOM
     -   Capture some information from the DOM
@@ -63,3 +63,16 @@
 5.  componentDidUpdate(prevProps, prevState, snapshot)
     -   Called after the render is finished in the re-render cycles
     -   Cause side effects
+
+### Unmounting Phase Methods
+
+1. componentWillUnmount()
+    - Method is invoked immediately before a component is unmounted and destroyed
+    - Cancelling any network requests, removing event handlers, cancelling any subscriptions and also invalidating timers.
+    - <span style='color:red;'>Do not call the setState method</span>
+
+### Error Handling Phase Methods
+
+1. static getDerivedStateFromError(error), componentDidCatch(error, info)
+
+    - When there is an error either during rendering, in a lifecycle method, or in the constructor of any child component
