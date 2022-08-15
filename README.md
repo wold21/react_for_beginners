@@ -41,4 +41,25 @@
 4.  componentDidMount()
     -   Invoked immediately after a component and all its children components have been rendered to the DOM
     -   Cause side effects. ExL Interact with the DOM or perform any ajax calls to load data
-    -
+
+### Updating Lifecycle Methods
+
+1.  static getDerivedStateFromProps(props, state)
+    -   Method is called every time a component is re-rendered
+    -   Set the state
+    -   Do not cause side effects. Ex: HTTP requests
+2.  shouldComponentUpdate(nextProps, nextState)
+    -   Dictates if the component should re-render or not
+    -   Performance optimization
+    -   Do not cause side effects. Ex: HTTP requests Calling the setState method
+3.  render()
+    -   Only required method
+    -   Read props & state and return JSX
+    -   Do not change state or interact with DOM or make ajax calls.
+4.  getSnapshotBeforeUpdate(prevProps, prevState)
+    -   Called right before the changes from the virtual DOM are to be reflected in the DOM
+    -   Capture some information from the DOM
+    -   Method will eiger return null or return a value. Returned value will be passed as the third parameter to the next method.
+5.  componentDidUpdate(prevProps, prevState, snapshot)
+    -   Called after the render is finished in the re-render cycles
+    -   Cause side effects
