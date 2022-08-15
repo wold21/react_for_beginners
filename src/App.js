@@ -13,6 +13,7 @@ import Form from "./components/Form";
 import LifecycleA from "./components/LifecycleA";
 import Fragment from "./components/Fragment";
 import Table from "./components/Table";
+import ParentComp from "./components/ParentComp";
 
 function App() {
     return (
@@ -37,8 +38,9 @@ function App() {
             <NameList />
             <Form />
             <LifecycleA />
-            <Fragment />*/}
-            <Table />
+            <Fragment />
+            <Table />*/}
+            <ParentComp />
         </div>
     );
 }
