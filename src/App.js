@@ -11,6 +11,8 @@ import UseGreeting from "./components/UseGreeting";
 import NameList from "./components/NameList";
 import Form from "./components/Form";
 import LifecycleA from "./components/LifecycleA";
+import Fragment from "./components/Fragment";
+import Table from "./components/Table";
 
 function App() {
     return (
@@ -33,8 +35,10 @@ function App() {
             <ParentComponent />
             <UseGreeting />
             <NameList />
-            <Form />*/}
+            <Form />
             <LifecycleA />
+            <Fragment />*/}
+            <Table />
         </div>
     );
 }
