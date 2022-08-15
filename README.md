@@ -10,7 +10,7 @@
         > static getDerivedStateFromProps
         > render and componentDidMount
 -   Updating
-    -   When a component is being re-rendererd as a result of changes to either its props or state
+    -   When a component is being re-rendered as a result of changes to either its props or state
         > static getDerivedStateFromProps
         > shouldComponentUpdate
         > render
@@ -21,3 +21,24 @@
 -   Error Handling
     -   When there is an error during rendering, in a lifecycle method, or in the constructor of any child component
         > static getDerivedStateFromError and componentDidCatch
+
+### Mounting Lifecycle Methods
+
+1.  constuctor(props)
+    -   A special function that will get called whenever a new component is created.
+    -   Initializing state Binding the event handlers
+    -   Do not cause side effects. Ex: HTTP requests
+    -   super(props) Directly overwtite this.state
+2.  static getDerivedStateFromProps(props, state)
+    -   When the state of the component depends on changes in props over time.
+    -   Set the state
+    -   Do not cause side effects. Ex: HTTP requests
+3.  render()
+    -   Only required method
+    -   Read props & state and return JSX
+    -   Do not change state or interact with DOM or make ajax calls.
+    -   Children components lifecycle methods are also executed.
+4.  componentDidMount()
+    -   Invoked immediately after a component and all its children components have been rendered to the DOM
+    -   Cause side effects. ExL Interact with the DOM or perform any ajax calls to load data
+    -
