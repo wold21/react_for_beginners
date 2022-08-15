@@ -10,6 +10,7 @@ import EventBind from "./components/EventBind";
 import ParentComponent from "./components/ParentComponent";
 import UseGreeting from "./components/UseGreeting";
 import NameList from "./components/NameList";
+import Form from "./components/Form";
 
 function App() {
     return (
@@ -30,8 +31,9 @@ function App() {
             <ClassClick /> 
             <EventBind />
             <ParentComponent />
-            <UseGreeting />*/}
-            <NameList />
+            <UseGreeting />
+            <NameList />*/}
+            <Form />
         </div>
     );
 }
