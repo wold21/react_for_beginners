@@ -15,6 +15,7 @@ import Fragment from "./components/Fragment";
 import Table from "./components/Table";
 import ParentComp from "./components/ParentComp";
 import RefsDemo from "./components/RefsDemo";
+import FocusInput from "./components/FocusInput";
 
 function App() {
     return (
@@ -41,8 +42,9 @@ function App() {
             <LifecycleA />
             <Fragment />
             <Table />
-            <ParentComp />*/}
-            <RefsDemo />
+            <ParentComp />
+            <RefsDemo />*/}
+            <FocusInput />
         </div>
     );
 }
